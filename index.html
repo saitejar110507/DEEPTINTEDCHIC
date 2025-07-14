@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEEPTINT | Bridal Makeup by Deepthi Kumari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for elements that need more styling */
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1519683109079-d5f539e1542f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .instagram-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .instagram-feed {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+        
+        /* Custom animation for hero text */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-pink-600">DEEPTINT</div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-pink-600 transition">Home</a>
+                <a href="#services" class="hover:text-pink-600 transition">Services</a>
+                <a href="#portfolio" class="hover:text-pink-600 transition">Portfolio</a>
+                <a href="#about" class="hover:text-pink-600 transition">About</a>
+                <a href="#contact" class="hover:text-pink-600 transition">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="https://instagram.com/deeptint.makeup" target="_blank" class="text-pink-600 hover:text-pink-800">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#contact" class="md:hidden bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition">Book Now</a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#home" class="py-2 hover:text-pink-600 transition">Home</a>
+                <a href="#services" class="py-2 hover:text-pink-600 transition">Services</a>
+                <a href="#portfolio" class="py-2 hover:text-pink-600 transition">Portfolio</a>
+                <a href="#about" class="py-2 hover:text-pink-600 transition">About</a>
+                <a href="#contact" class="py-2 hover:text-pink-600 transition">Contact</a>
+                <a href="#contact" class="bg-pink-600 text-white px-4 py-2 rounded-full text-center hover:bg-pink-700 transition">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image flex items-center justify-center text-center text-white relative">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-3xl mx-auto animate-fadeInUp">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">From my hands to her heart</h1>
+                <p class="text-xl md:text-2xl mb-8 italic">"Building her bridal beauty like a garden in full bloom."</p>
+                <p class="text-lg mb-10">Bridal makeup artist based in Hyderabad, specializing in timeless South Indian looks.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full text-lg font-medium transition">Book Now</a>
+                    <a href="#portfolio" class="bg-white hover:bg-gray-100 text-pink-600 px-8 py-3 rounded-full text-lg font-medium transition">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What I Offer</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-pink-600 mb-4">
+                        <i class="fas fa-brush text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Bridal Makeup</h3>
+                    <p class="text-gray-600">HD, long-wear makeup with a natural glow that lasts through all your wedding festivities.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-pink-600 mb-4">
+                        <i class="fas fa-spa text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hairstyling</h3>
+                    <p class="text-gray-600">Traditional buns adorned with florals, modern twists, and everything in between.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-pink-600 mb-4">
+                        <i class="fas fa-tshirt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Saree Draping</h3>
+                    <p class="text-gray-600">Expert pre-pleating and box folding techniques to make you look flawless in your saree.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-pink-600 mb-4">
+                        <i class="fas fa-magic text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Bridal Trials</h3>
+                    <p class="text-gray-600">Preview your look with a consultation to ensure everything is perfect for your big day.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full text-lg font-medium transition">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">My Brides, My Canvas</h2>
+            
+            <!-- Portfolio Filter -->
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button type="button" class="portfolio-filter px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50" data-filter="all">
+                        All
+                    </button>
+                    <button type="button" class="portfolio-filter px-4 py-2 text-sm font-medium border-t border-b border-gray-300 bg-white text-gray-700 hover:bg-gray-50" data-filter="makeup">
+                        Makeup
+                    </button>
+                    <button type="button" class="portfolio-filter px-4 py-2 text-sm font-medium border-t border-b border-gray-300 bg-white text-gray-700 hover:bg-gray-50" data-filter="hair">
+                        Hair
+                    </button>
+                    <button type="button" class="portfolio-filter px-4 py-2 text-sm font-medium rounded-r-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50" data-filter="draping">
+                        Draping
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item" data-category="makeup">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Bridal Makeup" class="w-full h-full object-cover">
+                    </div>
+                    <p class="mt-2 text-sm text-gray-500">Makeup</p>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item" data-category="hair">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80" alt="Bridal Hairstyle" class="w-full h-full object-cover">
+                    </div>
+                    <p class="mt-2 text-sm text-gray-500">Hair</p>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item" data-category="draping">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1525507119-7a1b338d1b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Saree Draping" class="w-full h-full object-cover">
+                    </div>
+                    <p class="mt-2 text-sm text-gray-500">Draping</p>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item" data-category="makeup">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Bridal Makeup" class="w-full h-full object-cover">
+                    </div>
+                    <p class="mt-2 text-sm text-gray-500">Makeup</p>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item" data-category="hair">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Bridal Hairstyle" class="w-full h-full object-cover">
+                    </div>
+                    <p class="mt-2 text-sm text-gray-500">Hair</p>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item" data-category="draping">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Saree Draping" class="w-full h-full object-cover">
+                    </div>
+                    <p class="mt-2 text-sm text-gray-500">Draping</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/3">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden aspect-square">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Deepthi Kumari" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="lg:w-2/3">
+                    <h2 class="text-3xl font-bold mb-6">Meet Deepthi</h2>
+                    <blockquote class="text-xl italic mb-8 text-gray-700">
+                        "I'm Deepthi, founder of Deeptint — where tradition meets glow. I help brides feel like the best version of themselves, using a calm approach, rich techniques, and a whole lot of heart."
+                    </blockquote>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="text-pink-600 text-3xl mb-2">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p class="font-bold text-lg">100+</p>
+                            <p class="text-gray-600">Happy Brides</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="text-pink-600 text-3xl mb-2">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <p class="font-bold text-lg">5+ Years</p>
+                            <p class="text-gray-600">Experience</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="text-pink-600 text-3xl mb-2">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p class="font-bold text-lg">Hyderabad</p>
+                            <p class="text-gray-600">Based</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-block bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full text-lg font-medium transition">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Where I Work</h2>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="text-pink-600 mt-1">
+                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Based in Hyderabad</h3>
+                                <p class="text-gray-600">Available for weddings across the city and surrounding areas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="text-pink-600 mt-1">
+                                <i class="fas fa-plane text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Available to Travel</h3>
+                                <p class="text-gray-600">For weddings across South India with travel arrangements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="text-pink-600 mt-1">
+                                <i class="fas fa-language text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Languages</h3>
+                                <p class="text-gray-600">Telugu, English, Hindi</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="text-pink-600 mt-1">
+                                <i class="fas fa-clock text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Availability</h3>
+                                <p class="text-gray-600">Booking 6-12 months in advance for peak wedding seasons.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Book Your Bridal Slot</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <div class="lg:w-1/2">
+                        <form class="bg-white rounded-lg shadow-md p-8">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="date" class="block text-gray-700 font-medium mb-2">Event Date</label>
+                                <input type="date" id="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="event" class="block text-gray-700 font-medium mb-2">Event Type</label>
+                                <select id="event" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                                    <option value="">Select Event</option>
+                                    <option value="wedding">Wedding</option>
+                                    <option value="reception">Reception</option>
+                                    <option value="engagement">Engagement</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="location" class="block text-gray-700 font-medium mb-2">Location</label>
+                                <input type="text" id="location" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-medium transition">Send Inquiry</button>
+                        </form>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="bg-white rounded-lg shadow-md p-8 h-full">
+                            <h3 class="text-xl font-bold mb-6">Quick Contact Options</h3>
+                            
+                            <div class="space-y-4">
+                                <a href="tel:+919876543210" class="flex items-center gap-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                                    <div class="bg-pink-100 p-3 rounded-full">
+                                        <i class="fas fa-phone text-pink-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Call Now</p>
+                                        <p class="text-sm text-gray-500">+91 98765 43210</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://wa.me/919876543210" class="flex items-center gap-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                                    <div class="bg-green-100 p-3 rounded-full">
+                                        <i class="fab fa-whatsapp text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">WhatsApp</p>
+                                        <p class="text-sm text-gray-500">Message directly</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://instagram.com/deeptint.makeup" target="_blank" class="flex items-center gap-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                                    <div class="bg-purple-100 p-3 rounded-full">
+                                        <i class="fab fa-instagram text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Instagram DM</p>
+                                        <p class="text-sm text-gray-500">@deeptint.makeup</p>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="mt-8 pt-6 border-t border-gray-200">
+                                <h4 class="font-bold mb-3">Working Hours</h4>
+                                <p class="text-gray-600">Monday to Saturday: 9:00 AM - 7:00 PM</p>
+                                <p class="text-gray-600">Sunday: By appointment only</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-6">See More Magic on Instagram</h2>
+            <p class="text-center text-gray-600 mb-8">Follow <a href="https://instagram.com/deeptint.makeup" target="_blank" class="text-pink-600 hover:underline">@deeptint.makeup</a> for latest work and updates</p>
+            
+            <div class="instagram-feed">
+                <!-- Instagram images would be loaded via API in real implementation -->
+                <div class="aspect-square bg-gray-100 rounded overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Instagram Post" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-100 rounded overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Instagram Post" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-100 rounded overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Instagram Post" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-100 rounded overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Instagram Post" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-100 rounded overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80" alt="Instagram Post" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-gray-100 rounded overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80" alt="Instagram Post" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between gap-8">
+                <div class="md:w-1/3">
+                    <h3 class="text-2xl font-bold mb-4">DEEPTINT</h3>
+                    <p class="text-gray-400">Bridal makeup artist based in Hyderabad, specializing in timeless South Indian looks.</p>
+                    
+                    <div class="flex space-x-4 mt-6">
+                        <a href="https://instagram.com/deeptint.makeup" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-pinterest text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/3">
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:w-1/3">
+                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt mt-1"></i>
+                            <span>Hyderabad, Telangana</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-phone mt-1"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-envelope mt-1"></i>
+                            <span>hello@deeptint.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 DEEPTINT by Deepthi Kumari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Portfolio filter functionality
+        const filterButtons = document.querySelectorAll('.portfolio-filter');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-pink-600', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700');
+                });
+                
+                // Add active class to clicked button
+                this.classList.remove('bg-white', 'text-gray-700');
+                this.classList.add('bg-pink-600', 'text-white');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Add animation class to hero text when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroText = document.querySelector('.animate-fadeInUp');
+            if (heroText) {
+                heroText.style.opacity = '0';
+                setTimeout(() => {
+                    heroText.classList.add('animate-fadeInUp');
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
